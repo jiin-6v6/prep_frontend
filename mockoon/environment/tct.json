@@ -11,7 +11,7 @@
     {
       "uuid": "d5e1fe9f-63d1-449f-a5a1-910aef9be9ad",
       "type": "http",
-      "documentation": "",
+      "documentation": "식당의 정보 조회 API",
       "method": "get",
       "endpoint": "restaurant/:restaurantId",
       "responses": [
@@ -72,7 +72,7 @@
     {
       "uuid": "31248a9f-1d40-4430-b04c-178198c150e6",
       "type": "http",
-      "documentation": "",
+      "documentation": "식당 목록 정보 조회 API",
       "method": "get",
       "endpoint": "restaurant",
       "responses": [
@@ -158,7 +158,7 @@
     {
       "uuid": "fa7633d4-5a47-4dba-8ac2-e121d3d3771c",
       "type": "http",
-      "documentation": "",
+      "documentation": "리스트의 정보 조회 API",
       "method": "get",
       "endpoint": "list/:listId",
       "responses": [
@@ -236,7 +236,7 @@
     {
       "uuid": "8ad5f861-e6e7-49cf-a59e-21422dc3cc67",
       "type": "http",
-      "documentation": "",
+      "documentation": "사용자의 정보 조회 API",
       "method": "get",
       "endpoint": "user/:userId",
       "responses": [
@@ -251,15 +251,7 @@
           "filePath": "",
           "databucketID": "",
           "sendFileAsBody": false,
-          "rules": [
-            {
-              "target": "params",
-              "modifier": "",
-              "value": "",
-              "invert": false,
-              "operator": "equals"
-            }
-          ],
+          "rules": [],
           "rulesOperator": "OR",
           "disableTemplating": false,
           "fallbackTo404": false,
@@ -393,16 +385,119 @@
       ],
       "enabled": true,
       "responseMode": null
+    },
+    {
+      "uuid": "c4fa5b62-ddec-490d-a100-87e60fa50ffb",
+      "type": "http",
+      "documentation": "사용자의 맛집 리스트 정보 조회 API",
+      "method": "get",
+      "endpoint": "user/:userId/list",
+      "responses": [
+        {
+          "uuid": "87363485-9c46-4ac8-9e9c-398d5be11e34",
+          "body": "{\r\n    \"userId\": \"coolcool\",\r\n    \"mzList\": [\r\n        {\r\n            \"userId\": \"coolcool\",\r\n            \"listId\": \"MZ00000005\",\r\n            \"listName\": \"coolcool맛집리스트\",\r\n            \"createdDate\": \"20211108\"\r\n        },\r\n        {\r\n            \"userId\": \"coolcool\",\r\n            \"listId\": \"MZ00000006\",\r\n            \"listName\": \"coolcool맛집리스트2nd\",\r\n            \"createdDate\": \"20211108\"\r\n        }\r\n    ]\r\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "사용자의 맛집 리스트 데이터 조회 되는 경우, 정상 응답",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "params",
+              "modifier": "userId",
+              "value": "coolcool",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "a17af017-beda-40c3-bd98-e65d28c9ee8f",
+          "body": "{\r\n    \"userId\": \"j-soo\",\r\n    \"mzList\": null\r\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "사용자의 맛집 리스트 데이터 조회 되지 않는 경우, 정상 응답",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "params",
+              "modifier": "userId",
+              "value": "j-soo",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "35bbe71f-255c-48ef-bf5d-ae1bb03ac241",
+          "body": "{\r\n    \"httpStatus\": \"BAD_REQUEST\",\r\n    \"code\": \"\",\r\n    \"message\": \"Invalid User ID\"\r\n}",
+          "latency": 0,
+          "statusCode": 400,
+          "label": "userId가 valid하지만 존재하지 않는 경우, 오류 응답 (default)",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "800ac4ae-3496-4553-8ef0-3640851d584a",
+          "body": "{\r\n    \"httpStatus\": \"BAD_REQUEST\",\r\n    \"code\": \"\",\r\n    \"message\": \"Invalid Request URL\"\r\n}",
+          "latency": 0,
+          "statusCode": 400,
+          "label": "userId가 invalid한 경우, 오류 응답",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "params",
+              "modifier": "userId",
+              "value": "^[/a-zA-Z]{1}[a-zA-Z0-9_-]{4,19}$",
+              "invert": false,
+              "operator": "regex"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
     }
   ],
   "rootChildren": [
     {
       "type": "route",
-      "uuid": "d5e1fe9f-63d1-449f-a5a1-910aef9be9ad"
+      "uuid": "31248a9f-1d40-4430-b04c-178198c150e6"
     },
     {
       "type": "route",
-      "uuid": "31248a9f-1d40-4430-b04c-178198c150e6"
+      "uuid": "d5e1fe9f-63d1-449f-a5a1-910aef9be9ad"
     },
     {
       "type": "route",
@@ -411,6 +506,10 @@
     {
       "type": "route",
       "uuid": "8ad5f861-e6e7-49cf-a59e-21422dc3cc67"
+    },
+    {
+      "type": "route",
+      "uuid": "c4fa5b62-ddec-490d-a100-87e60fa50ffb"
     }
   ],
   "proxyMode": false,
