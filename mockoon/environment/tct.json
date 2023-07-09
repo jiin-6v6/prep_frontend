@@ -399,7 +399,12 @@
           "latency": 0,
           "statusCode": 200,
           "label": "사용자의 맛집 리스트 데이터 조회 되는 경우, 정상 응답",
-          "headers": [],
+          "headers": [
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            }
+          ],
           "bodyType": "INLINE",
           "filePath": "",
           "databucketID": "",
@@ -424,7 +429,12 @@
           "latency": 0,
           "statusCode": 200,
           "label": "사용자의 맛집 리스트 데이터 조회 되지 않는 경우, 정상 응답",
-          "headers": [],
+          "headers": [
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            }
+          ],
           "bodyType": "INLINE",
           "filePath": "",
           "databucketID": "",
@@ -449,7 +459,12 @@
           "latency": 0,
           "statusCode": 400,
           "label": "userId가 valid하지만 존재하지 않는 경우, 오류 응답 (default)",
-          "headers": [],
+          "headers": [
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            }
+          ],
           "bodyType": "INLINE",
           "filePath": "",
           "databucketID": "",
@@ -466,7 +481,12 @@
           "latency": 0,
           "statusCode": 400,
           "label": "userId가 invalid한 경우, 오류 응답",
-          "headers": [],
+          "headers": [
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            }
+          ],
           "bodyType": "INLINE",
           "filePath": "",
           "databucketID": "",
