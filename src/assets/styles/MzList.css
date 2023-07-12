@@ -1,0 +1,57 @@
+.user_mz_list_container_header {
+  height: 20px;
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  margin: 10px;
+
+  display: flex;
+  align-items: center;
+
+  background-color: #21b7a9;
+  color: #ededef;
+  border-radius: 10px;
+}
+
+.user_mz_list_name_header {
+  width: 75%;
+  justify-content: start;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.user_mz_list_created_date_header {
+  width: 25%;
+  justify-content: end;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.user_mz_list {
+  height: 50px;
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  margin: 10px;
+
+  display: flex;
+  align-items: center;
+
+  background-color: #aedfdb;
+  border-radius: 10px;
+
+  cursor: pointer;
+}
+
+.user_mz_list_name {
+  width: 75%;
+  justify-content: start;
+  font-size: 15px;
+}
+
+.user_mz_list_created_date {
+  width: 25%;
+  justify-content: end;
+}

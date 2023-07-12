@@ -9,18 +9,18 @@ header {
 }
 
 .header_of_left {
-  width: 25%;
+  width: 20%;
   justify-content: start;
 }
 
 .header_text {
-  width: 50%;
+  width: 60%;
   justify-content: center;
   font-weight: bold;
   font-size: 30px;
 }
 
 .header_of_right {
-  width: 25%;
+  width: 20%;
   justify-content: end;
 }

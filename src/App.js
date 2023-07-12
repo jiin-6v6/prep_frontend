@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import "./App.css";
@@ -8,6 +8,10 @@ const USER_ID = "coolcool";
 
 function App() {
   const [userId, setUserId] = useState(USER_ID);
+
+  useEffect(() => {
+    setUserId(userId);
+  }, [userId]);
 
   return (
     <BrowserRouter>

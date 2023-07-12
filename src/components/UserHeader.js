@@ -5,8 +5,10 @@ import "../assets/styles/UserHeader.css";
 const UserHeader = ({ userId }) => {
   return (
     <div className="user_header">
-      {userId}
-      <img src={profileIconFilePath} alt="프로필 아이콘" />
+      <div className="user_name">{userId}</div>
+      <div className="user_profile_icon">
+        <img src={profileIconFilePath} alt="프로필 아이콘" />
+      </div>
     </div>
   );
 };
