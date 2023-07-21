@@ -1,0 +1,66 @@
+.mz_list_info_container_header {
+  height: 20px;
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  margin: 10px;
+
+  display: flex;
+  align-items: center;
+
+  background-color: #21b7a9;
+  color: #ededef;
+  border-radius: 10px;
+}
+
+.mz_list_info_category_header {
+  width: 10%;
+  justify-content: start;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.mz_list_info_restaurant_name_header {
+  width: 40%;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.mz_list_info_restaurant_address_header {
+  width: 50%;
+  justify-content: end;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.mz_list_restaurant {
+  height: 50px;
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  margin: 10px;
+
+  display: flex;
+  align-items: center;
+
+  background-color: #aedfdb;
+  border-radius: 10px;
+
+  cursor: pointer;
+}
+
+.mz_list_restaurant_category {
+  width: 10%;
+  justify-content: start;
+  font-size: 13px;
+}
+
+.mz_list_restaurant_name {
+  width: 40%;
+}
+.mz_list_restaurant_address {
+  width: 50%;
+  justify-content: end;
+}
