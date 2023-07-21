@@ -8,6 +8,12 @@
 npm install
 ```
 
+## 서버 실행하기
+
+```
+npm start
+```
+
 ## Mock Server
 
 Mocker Server는 Mockoon(https://mockoon.com/docs/latest/about/)을 사용
