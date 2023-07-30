@@ -1,7 +1,7 @@
-import MzList from "../../components/MzList";
-import Header from "../../components/Header";
-import AddMzListButton from "../../components/AddMzListButton";
-import UserHeader from "../../components/UserHeader";
+import MzList from "../components/MzList";
+import Header from "../components/Header";
+import AddMzListButton from "../components/AddMzListButton";
+import UserHeader from "../components/UserHeader";
 
 const Home = ({ userId }) => {
   return (

@@ -1,15 +1,22 @@
 import moment from "moment";
+import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 import "../assets/styles/MzList.css";
 
+const BACKEND_SERVER = process.env.REACT_APP_BACKEND_SERVER;
+
 const MzList = ({ userId }) => {
+  const navigate = useNavigate();
   const [userMzList, setUserMzList] = useState([]);
 
   const getUserMzList = async (userId) => {
-    const res = await fetch(`http://localhost:3001/user/${userId}/list`).then(
-      (response) => response.json()
-    );
+    const res = await fetch(`${BACKEND_SERVER}/user/${userId}/list`, {
+      headers: {
+        Accept: "application/json",
+      },
+      method: "GET",
+    }).then((response) => response.json());
     setUserMzList(Object.values(res.mzList));
   };
 
@@ -26,7 +33,16 @@ const MzList = ({ userId }) => {
       <div className="user_mz_list_container">
         {userMzList.map((item) => {
           return (
-            <div className="user_mz_list" id={item.listId} key={item.listId}>
+            <div
+              className="user_mz_list"
+              id={item.listId}
+              key={item.listId}
+              onClick={() =>
+                navigate(`/mzlist/${item.listName}`, {
+                  state: { mzListId: item.listId },
+                })
+              }
+            >
               <div className="user_mz_list_name">{item.listName}</div>
               <div className="user_mz_list_created_date">
                 {moment(item.createdDate, "YYYYMMDD").format("YYYY-MM-DD")}
