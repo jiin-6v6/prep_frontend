@@ -14,7 +14,9 @@ const MzListRestaurant = ({ mzListId }) => {
       },
       method: "GET",
     }).then((response) => response.json());
-    setRestaurantList(Object.values(res.restaurantList));
+    setRestaurantList(
+      res.restaurantList ? Object.values(res.restaurantList) : []
+    );
   };
 
   useEffect(() => {
