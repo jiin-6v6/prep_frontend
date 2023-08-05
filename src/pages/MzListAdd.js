@@ -5,7 +5,7 @@ import UserHeader from "../components/UserHeader";
 import GoBackButton from "../components/GoBackButton";
 import MzListAddForm from "../components/MzListAddForm";
 
-const MzListForm = () => {
+const MzListAdd = () => {
   const userId = useContext(AppContext);
 
   return (
@@ -19,4 +19,4 @@ const MzListForm = () => {
     </div>
   );
 };
-export default MzListForm;
+export default MzListAdd;

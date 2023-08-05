@@ -4,7 +4,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home";
 import MzListInfo from "./pages/MzListInfo";
-import MzListForm from "./pages/MzListForm";
+import MzListAdd from "./pages/MzListAdd";
+import MzListUpdate from "./pages/MzListUpdate";
 
 const USER_ID = "coolcool";
 
@@ -24,7 +25,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/mzlist/:mzListName" element={<MzListInfo />} />
-            <Route path="/mzlist/new" element={<MzListForm />} />
+            <Route path="/mzlist/new" element={<MzListAdd />} />
+            <Route path="/mzlist/:mzListName/edit" element={<MzListUpdate />} />
           </Routes>
         </div>
       </BrowserRouter>

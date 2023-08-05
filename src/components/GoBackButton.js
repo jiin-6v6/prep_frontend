@@ -10,6 +10,7 @@ const GoBackButton = () => {
       <img
         src={goBackButtonFilePath}
         alt="뒤로 가기 버튼"
+        // TODO 홈으로 보내는 것이 아니라 뒤로가는 것으로 수정
         onClick={() => navigate("/")}
       />
     </div>

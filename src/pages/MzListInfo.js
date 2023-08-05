@@ -21,7 +21,7 @@ const MzListInfo = () => {
       />
       <MzListRestaurant mzListId={state?.mzListId} />
       <AddButton
-        onClickTarget={`/mzlist/${param?.mzListName}/new`}
+        onClickTarget={`/mzlist/${param?.mzListName}/edit`}
         mzListId={state?.mzListId}
       />
     </div>

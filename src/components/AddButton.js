@@ -10,7 +10,9 @@ const AddButton = ({ onClickTarget, mzListId }) => {
       <img
         src={addButtonFilePath}
         alt="맛집 리스트 추가 버튼"
-        onClick={() => navigate(`${onClickTarget}`)}
+        onClick={() =>
+          navigate(`${onClickTarget}`, { state: { mzListId: mzListId } })
+        }
       />
     </div>
   );
