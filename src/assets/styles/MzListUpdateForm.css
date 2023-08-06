@@ -12,7 +12,8 @@
 }
 
 .restaurant_not_in_mzlist_container_header {
-  font-size: 22px;
+  font-weight: bold;
+  font-size: 17px;
 
   height: 50px;
   display: flex;
@@ -42,7 +43,8 @@
   display: table-row;
   width: 100%;
 
-  font-size: 18px;
+  font-weight: bold;
+  font-size: 17px;
 }
 
 .restaurant_not_in_mzlist_address {
@@ -67,7 +69,8 @@
 }
 
 .restaurant_in_mzlist_container_header {
-  font-size: 22px;
+  font-weight: bold;
+  font-size: 17px;
 
   height: 50px;
   display: flex;
@@ -97,7 +100,8 @@
   display: table-row;
   width: 100%;
 
-  font-size: 18px;
+  font-weight: bold;
+  font-size: 17px;
 }
 
 .restaurant_in_mzlist_address {
@@ -109,4 +113,24 @@
 .restaurant_in_mzlist_category {
   display: table-cell;
   width: 30%;
+}
+
+/* 저장 버튼 */
+.mzlist_update_button {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mzlist_update_button button {
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+
+  width: 100px;
+  height: 50px;
+
+  font-size: 17px;
+  background-color: #123244;
+  color: #ffffff;
 }
