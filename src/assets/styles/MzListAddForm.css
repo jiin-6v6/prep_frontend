@@ -1,0 +1,55 @@
+.mzlist_name_input_container {
+  font-weight: bold;
+  font-size: 17px;
+
+  display: flex;
+  align-items: center;
+}
+
+.mzlist_name {
+  width: 25%;
+  color: #123244;
+  text-align: right;
+}
+
+.mzlist_name_input {
+  width: 50%;
+  font-size: 17px;
+}
+
+.mzlist_name_input input {
+  width: 250px;
+  height: 25px;
+
+  border-radius: 10px;
+  border: 2px solid #b8dae3;
+
+  padding: 10px;
+
+  display: inline;
+  float: left;
+
+  margin-left: 10px;
+}
+
+.mzlist_name_input input:focus {
+  border: 2px solid #046683;
+  outline: none;
+}
+
+.mzlist_submit_button {
+  width: 25%;
+}
+
+.mzlist_submit_button button {
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+
+  width: 100px;
+  height: 50px;
+
+  font-size: 17px;
+  background-color: #046683;
+  color: #ffffff;
+}

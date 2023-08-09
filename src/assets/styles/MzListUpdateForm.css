@@ -1,0 +1,136 @@
+.restaurant_list_container {
+  display: flex;
+}
+
+/* 왼쪽 리스트 */
+.restaurant_not_in_mzlist_container {
+  width: 50%;
+  justify-content: start;
+
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.restaurant_not_in_mzlist_container_header {
+  font-weight: bold;
+  font-size: 17px;
+
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #dcbd85;
+  color: #ffffff;
+  border-radius: 10px;
+}
+
+.restaurant_not_in_mzlist {
+  width: 100%;
+  display: table;
+
+  background-color: #046683;
+  border-radius: 10px;
+  color: #ffffff;
+
+  margin-top: 5px;
+  margin-bottom: 5px;
+
+  cursor: pointer;
+}
+
+.restaurant_not_in_mzlist_name {
+  display: table-row;
+  width: 100%;
+
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.restaurant_not_in_mzlist_address {
+  display: table-cell;
+  width: 70%;
+  text-align: left;
+  padding-left: 15px;
+}
+.restaurant_not_in_mzlist_category {
+  display: table-cell;
+  width: 30%;
+}
+
+/* 오른쪽 리스트 */
+
+.restaurant_in_mzlist_container {
+  width: 50%;
+  justify-content: end;
+
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.restaurant_in_mzlist_container_header {
+  font-weight: bold;
+  font-size: 17px;
+
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #dcbd85;
+  color: #ffffff;
+  border-radius: 10px;
+}
+
+.restaurant_in_mzlist {
+  width: 100%;
+  display: table;
+
+  background-color: #046683;
+  border-radius: 10px;
+  color: #ffffff;
+
+  margin-top: 5px;
+  margin-bottom: 5px;
+
+  cursor: pointer;
+}
+
+.restaurant_in_mzlist_name {
+  display: table-row;
+  width: 100%;
+
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.restaurant_in_mzlist_address {
+  display: table-cell;
+  width: 70%;
+  text-align: left;
+  padding-left: 15px;
+}
+.restaurant_in_mzlist_category {
+  display: table-cell;
+  width: 30%;
+}
+
+/* 저장 버튼 */
+.mzlist_update_button {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mzlist_update_button button {
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+
+  width: 100px;
+  height: 50px;
+
+  font-size: 17px;
+  background-color: #123244;
+  color: #ffffff;
+}

@@ -1,17 +1,19 @@
 import MzList from "../components/MzList";
 import Header from "../components/Header";
-import AddMzListButton from "../components/AddMzListButton";
+import MenuButton from "../components/MenuButton";
 import UserHeader from "../components/UserHeader";
+import AddButton from "../components/AddButton";
 
-const Home = ({ userId }) => {
+const Home = () => {
   return (
     <div className="Home">
       <Header
-        leftChild={<AddMzListButton />}
+        leftChild={<MenuButton />}
         headerText={"HOME PAGE"}
-        rightChild={<UserHeader userId={userId} />}
+        rightChild={<UserHeader />}
       />
-      <MzList userId={userId} />
+      <MzList />
+      <AddButton onClickTarget={"/mzlist/new"} />
     </div>
   );
 };

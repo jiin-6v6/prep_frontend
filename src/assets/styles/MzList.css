@@ -9,8 +9,8 @@
   display: flex;
   align-items: center;
 
-  background-color: #21b7a9;
-  color: #ededef;
+  background-color: #dcbd85;
+  color: #ffffff;
   border-radius: 10px;
 }
 
@@ -39,7 +39,9 @@
   display: flex;
   align-items: center;
 
-  background-color: #aedfdb;
+  background-color: #046683;
+  color: #ffffff;
+  font-weight: bold;
   border-radius: 10px;
 
   cursor: pointer;

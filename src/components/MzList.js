@@ -1,23 +1,24 @@
 import moment from "moment";
 import { useNavigate } from "react-router-dom";
-import { useState, useEffect } from "react";
-
+import { useState, useEffect, useContext } from "react";
+import { AppContext } from "../App";
 import "../assets/styles/MzList.css";
 
 const BACKEND_SERVER = process.env.REACT_APP_BACKEND_SERVER;
 
-const MzList = ({ userId }) => {
+const MzList = () => {
   const navigate = useNavigate();
   const [userMzList, setUserMzList] = useState([]);
+  const userId = useContext(AppContext);
 
   const getUserMzList = async (userId) => {
-    const res = await fetch(`${BACKEND_SERVER}/user/${userId}/list`, {
+    const res = await fetch(`${BACKEND_SERVER}/user/${userId}/mzlist`, {
       headers: {
         Accept: "application/json",
       },
       method: "GET",
     }).then((response) => response.json());
-    setUserMzList(Object.values(res.mzList));
+    setUserMzList(res.mzList ? Object.values(res.mzList) : []);
   };
 
   useEffect(() => {

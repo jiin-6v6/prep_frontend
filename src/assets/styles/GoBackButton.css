@@ -1,6 +1,6 @@
-.add_list_mz_button img {
+.go_back_button img {
   height: 50px;
-  margin-left: 20px;
+  margin-left: 10px;
   float: left;
   cursor: pointer;
 }
